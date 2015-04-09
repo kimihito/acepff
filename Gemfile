@@ -52,5 +52,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'dotenv-rails'
 end
 
