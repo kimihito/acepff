@@ -9,6 +9,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+gem 'google-api-client'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
