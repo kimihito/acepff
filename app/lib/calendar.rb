@@ -11,6 +11,7 @@ class Calendar
   end
 
   def create_channel
+    # Push通知を送るためのチャンネルを作成する。
     @client.execute!(
       api_method: @service.events.watch,
       parameters: { calendarId: ENV['CALENDAR_ID'] },
@@ -22,12 +23,14 @@ class Calendar
   end
 
   def get_events
-    @client.execute!(
+    # 更新された予定を取得する
+    response = @client.execute!(
       api_method: @service.events.list,
       parameters: {
         calendarId: ENV['CALENDAR_ID'],
         updatedMin: 1.minutes.ago.to_datetime.rfc3339
       }
-    )
+    ).response.body
+    JSON.parse(response)['items']
   end
 end
