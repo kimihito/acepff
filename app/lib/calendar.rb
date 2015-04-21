@@ -17,8 +17,7 @@ class Calendar
       body_object: {
         id: SecureRandom.uuid(),
         type: 'web_hook',
-        token: @client.authorization.access_token,
-        address: 'https://calm-eyrie-6230.herokuapp.com/notifications'
+        address: ENV['RECEIVE_URL']
       })
   end
 end
