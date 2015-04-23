@@ -17,12 +17,17 @@ class NotificationsController < ApplicationController
       if e.empty?
         # 新しく追加されたイベントの処理
         new_event = Event.create(code: event['id'])
+        type = 'created'
       else
         # キャンセルだった場合
+        type = 'updated'
         if event['status'] == 'cancelled'
+          type = 'deleted'
           e.destroy
         end
       end
+      fb = Facebook.new
+      fb.post_calendar_schedule(event, type)
     end
   end
 end
