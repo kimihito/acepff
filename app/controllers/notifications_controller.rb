@@ -16,7 +16,7 @@ class NotificationsController < ApplicationController
       e = Event.where(code: event['id'])
       if e.empty?
         # 新しく追加されたイベントの処理
-        new_event = Event.create(code: event['id'])
+        Event.create(code: event['id'])
         type = 'created'
       else
         # キャンセルだった場合
