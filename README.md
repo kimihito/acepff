@@ -4,7 +4,7 @@
 
 ## TODO
 
--[] いい感じの文章を書きたい
+- [] いい感じの文章を書きたい
 
--[x] Deploy to Heroku のボタンを入れる
+- [x] Deploy to Heroku のボタンを入れる
 
