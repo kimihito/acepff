@@ -1,0 +1,36 @@
+{
+  "name": "acepff",
+  "description": "Post Facebook when specific Google Calendar updates event.",
+  "repository": "https://github.com/kimihito/acepff",
+  "keywords": ["Facebook", "Google", "Calnedar"],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:setup"
+  }
+  "env": {
+    "CALENDAR_ID": {
+      "description": "set Google Calendar ID You want to connect",
+      "value": "YOUR GOOGLE CALENDAR ID"
+    },
+    "RECEIVE_URL": {
+      "description": "set URL receives Google Calendar push notification",
+      "value": "YOUR-APP-NAME.herokuapp.com/notifications"
+    },
+    "CLIENT_ID": {
+      "description": "set Client id allows to use Google Calendar API",
+      "value": ""
+    },
+    "CLIENT_SECRET": {
+      "description": "set Client Secret allows to use Google Calendar API",
+      "value":""
+    },
+    "REFRESH_TOKEN": {
+      "description": "set Refresh Token allows to use Google Calendar API",
+      "value":""
+    },
+    "FACEBOOK_ACCESS_TOKEN": {
+      "description": "set your application access token of Facebook allows 'publish_actions'",
+      "value":""
+    }
+  }
+
+}
