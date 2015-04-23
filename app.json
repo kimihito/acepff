@@ -5,7 +5,8 @@
   "keywords": ["Facebook", "Google", "Calnedar"],
   "scripts": {
     "postdeploy": "bundle exec rake db:setup"
-  }
+  },
+
   "env": {
     "CALENDAR_ID": {
       "description": "set Google Calendar ID You want to connect",
@@ -32,5 +33,4 @@
       "value":""
     }
   }
-
 }
