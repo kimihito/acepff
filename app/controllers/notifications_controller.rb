@@ -1,6 +1,9 @@
 class NotificationsController < ApplicationController
   skip_before_action :verify_authentication_token
 
+  def index
+  end
+
   def receive
     # push notificationを受け取り、変更されたイベントを取得
     # その後、Facebookに投稿する。
