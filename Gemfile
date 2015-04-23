@@ -11,6 +11,7 @@ group :production do
 end
 
 gem 'google-api-client'
+gem 'koala'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
